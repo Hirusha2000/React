@@ -1,20 +1,14 @@
 import { useState } from "react";
 
-function List(){
+interface Props{
+    cities:string[];
+    heading:string;
+}
+
+function List({cities,heading}:Props){
 
 
-let cities=[
-    "Sydney",
-    "Melbourne",
-    "Brisbane",
-    "Perth",
-    "Adelaide",
-    "Gold Coast",
-    "Canberra",
-    "NewCastle",
-    "Hobart",
-    "Darwin"
-]
+
 
  const [selectedIndex ,setSelectedIndex]=useState<number>()
 
@@ -22,7 +16,7 @@ let cities=[
 
     return(
         <>
- <h1>List</h1>
+ <h1>{heading}</h1>
 
 {cities.length==0 && <h1>No Items in the Array</h1>}
 
