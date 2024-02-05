@@ -3,24 +3,21 @@ import Alert from "./Alert";
 import { useState } from "react";
 
 
+interface Person{
+  firstName:string;
+  lastName:string;
+}
 
 function App(){
-const [isVisible,setIsVisible] = useState<boolean>(false )
-const [count,setCount]=useState(0);
 
-const onSubmit = ()=> {
+ 
+  const[person,setPerson]=useState({firstName:'Hirusha',lastName:'Geeganage'} as Person)
 
-setCount(count+1);
-setIsVisible(false)
-
- console.log(count);
-} 
 
 return (
 <div>
- {/* <Alert>Hello World</Alert> */}
- <Button  onClick={onSubmit}>ClickMe</Button>
 
+{person.firstName} {person.lastName}
 </div>
 )
 }
