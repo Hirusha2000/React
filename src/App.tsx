@@ -1,11 +1,11 @@
-import Menu from "./Menu";
+import List from "./List";
+
 
 function App(){
-return <div>
-
-  <Menu></Menu>
+return (
+<div>
+  <List/>
 </div>
-
+)
 }
-
-export default App;
+export default App; 
